@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'SansBlackKR';
+    src: url('./NotoSansKR-Black.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'SansExBoldKR';
+    src: url('./NotoSansKR-ExtraBold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'SansBoldKR';
+    src: url('./NotoSansKR-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'SansSemiBoldKR';
+    src: url('./NotoSansKR-SemiBold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'SansMediumKR';
+    src: url('./NotoSansKR-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'SansRegularKR';
+    src: url('./NotoSansKR-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SerifBlackKR';
+    src: url('./NotoSerifKR-Black.otf') format('truetype');
+}
+@font-face {
+    font-family: 'SerifBoldKR';
+    src: url('./NotoSerifKR-Bold.otf') format('truetype');
+}
+@font-face {
+    font-family: 'SerifSemiBoldKR';
+    src: url('./NotoSerifKR-SemiBold.otf') format('truetype');
+}
+@font-face {
+    font-family: 'SerifMediumKR';
+    src: url('./NotoSerifKR-Medium.otf') format('truetype');
+}
+@font-face {
+    font-family: 'SerifRegularKR';
+    src: url('./NotoSerifKR-Regular.otf') format('truetype');
+}
