@@ -1,33 +1,35 @@
-import React, { useState } from 'react';
+// React Imports
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { createRoom } from './SessionController'; // Import the service
+// Service Imports
+import { createRoom } from '../SessionController'; // Import the service
 
 const Create = () => {
-    const [roomCode, setRoomCode] = useState('');
-    const navigate = useNavigate(); // Import useNavigate from react-router-dom
+  // State variables
+  const navigate = useNavigate();
 
+  // Function to handle room creation
+  const handleCreateRoom = async (e) => {
+    e.preventDefault();
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-    
-        try {
-          const response = await createRoom(); // Calling the service
-          setRoomCode(response.data);
-          navigate(`/room/${response.data}`);
-          console.log('Room created successfully:', response);
-        } catch (error) {
-          console.error('Failed to create room:', error);
-        }
-    };
+    try {
+      const response = await createRoom();                  // Calling the service
+      navigate(`/room/${response.data}`);                   // Navigate to the room page
+      console.log('Room created successfully:', response);  // Log the response for debugging
+    } catch (error) {
+      console.error('Failed to create room:', error);       // Log the error for debugging
+    }
+  };
 
-    return (
-        <div style={{ textAlign: 'center'}}>
-            <button
-                class="button"
-                onClick={handleSubmit}>Create</button>
-        </div>
-    );
+  // Return
+  return (
+    <>
+      <button
+        class="button"
+        onClick={handleCreateRoom}>MAKE A RESERVATION</button>
+    </>
+  );
 }
 
 export default Create;

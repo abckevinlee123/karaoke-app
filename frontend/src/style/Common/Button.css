@@ -1,0 +1,29 @@
+/* Button.css */
+@import url('../fonts/Fonts.css');
+
+.button {
+    font-family: 'Outfit', sans-serif;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #3D52D5, #B81365, #712D64);
+    background-size: 300% 300%;
+    animation: gradientSweep 8s ease infinite;
+    box-shadow: 10px 10px 0 #000000;
+    transition: transform 0.2s ease;
+}
+  
+@keyframes gradientSweep {
+    0% {
+      background-position: 100% 100%;
+    }
+    50% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
+}

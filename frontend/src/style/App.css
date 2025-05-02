@@ -1,0 +1,13 @@
+/* App.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+html, body {
+    height: 100%;
+    overflow: hidden; /* prevent scrollbars */
+    background-color: #2C2C53; /* optional */
+    color: white; /* optional for contrast */
+}

@@ -1,14 +1,17 @@
+// React Imports
 import Alert from 'react-bootstrap/Alert';
-import Button from 'react-bootstrap/Button';
 
-const Wrong = ({ tex, setVar }) => {
+// Style Imports
+import '../../style/Wrong.css';
+
+const Wrong = ({ show, setShow }) => {
   return (
     <>
-      <Alert show={tex} variant="success">
-        <Alert.Heading>No such room</Alert.Heading>
-          <Button onClick={() => setVar(false)} variant="outline-success">
-            Ask your friend again
-          </Button>
+      <Alert 
+        className="alert"
+        show={show}
+        onClick={() => setShow(false)}>
+        <Alert.Heading>ROOM DOESN'T EXIST, ASK FOR THE ROOM # AGAIN</Alert.Heading>
       </Alert>
     </>
   );

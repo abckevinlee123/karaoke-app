@@ -1,0 +1,18 @@
+/* Wrong.css */
+@import url('../fonts/Fonts.css');
+
+.alert {
+    cursor: pointer;
+    font-family: 'Outfit', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Cleaner than margin hack */
+    z-index: 9999;
+    pointer-events: auto;
+    background-color: #DE3C4B; /* Optional: style your alert */
+    color: white;
+    padding: 16px 32px;
+    border-radius: 8px;
+    box-shadow: 10px 10px 0 #7B101B;
+}

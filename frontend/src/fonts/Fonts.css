@@ -1,12 +1,12 @@
 @font-face {
-    font-family: 'SansBlackKR';
-    src: url('./NotoSansKR-Black.ttf') format('truetype');
+    font-family: 'CalSans';
+    src: url('./CalSans-Regular.ttf') format('truetype');
 }
 @font-face {
-    font-family: 'SansExBoldKR';
-    src: url('./NotoSansKR-ExtraBold.ttf') format('truetype');
+    font-family: 'Outfit';
+    src: url('./Outfit-VariableFont_wght.ttf') format('truetype');
 }
-@font-face {
+/* @font-face {
     font-family: 'SansBoldKR';
     src: url('./NotoSansKR-Bold.ttf') format('truetype');
 }
@@ -42,4 +42,4 @@
 @font-face {
     font-family: 'SerifRegularKR';
     src: url('./NotoSerifKR-Regular.otf') format('truetype');
-}
+} */

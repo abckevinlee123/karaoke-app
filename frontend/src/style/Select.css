@@ -1,0 +1,13 @@
+/* Select.css */
+@import url('../fonts/Fonts.css');
+
+.container {
+    display: flex;
+    flex-direction: column;     /* Stack Join and Create vertically */
+    align-items: center;        /* Center horizontally */
+    justify-content: center;    /* Center vertically */
+    height: 100vh;              /* Fill the whole screen */
+    width: 100vw;
+    padding: 20px;
+    box-sizing: border-box;
+}

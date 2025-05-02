@@ -1,0 +1,54 @@
+@import url('../fonts/Fonts.css');
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  position: relative; /* Needed for absolutely positioning the alert */
+  flex-wrap: wrap;     /* Optional: Wraps input + button on smaller screens */
+  padding: 20px;
+}
+
+.button {
+  font-family: 'Outfit', sans-serif;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #3D52D5, #B81365, #712D64);
+  background-size: 300% 300%;
+  animation: gradientSweep 8s ease infinite;
+  box-shadow: 10px 10px 0 #16162F;
+  transition: transform 0.2s ease;
+}
+
+.input {
+  font-family: 'Outfit', sans-serif;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #EAEAF6;
+  box-shadow: 10px 10px 0 #16162F;
+  /* transition: transform 0.2s ease; */
+}
+
+.input::placeholder {
+  color: #9D9DAC;
+  opacity: 1;
+}
+
+@keyframes gradientSweep {
+  0% {
+    background-position: 100% 100%;
+  }
+  50% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
