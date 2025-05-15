@@ -21,7 +21,7 @@ public class SessionRepository {
     @Autowired
     private DynamoDbClient dynamoDbClient;
 
-    private final String tableName = "karaoke-rooms";
+    private final String roomTable = "karaoke-rooms";
 
     public void saveRoom(Room room) {
         Map<String, AttributeValue> item = new HashMap<>();
@@ -34,7 +34,7 @@ public class SessionRepository {
         item.put("spotifyToken", AttributeValue.fromS(room.getSpotifyToken()));
 
         PutItemRequest request = PutItemRequest.builder()
-                .tableName(tableName)
+                .tableName(roomTable)
                 .item(item)
                 .build();
 
@@ -43,7 +43,7 @@ public class SessionRepository {
 /////// UNDER WORK //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     public void addTime(String roomCode, long expiresAt, String spotifyToken, Instant utc) {
         GetItemRequest request = GetItemRequest.builder()
-                .tableName(tableName)
+                .tableName(roomTable)
                 .key(Map.of("roomCode", AttributeValue.fromS(roomCode)))
                 .build();
 
@@ -53,7 +53,7 @@ public class SessionRepository {
 
     public boolean roomExists(String roomCode) {
         GetItemRequest request = GetItemRequest.builder()
-                .tableName(tableName)
+                .tableName(roomTable)
                 .key(Map.of("roomCode", AttributeValue.fromS(roomCode)))
                 .build();
 
@@ -62,7 +62,7 @@ public class SessionRepository {
 /////// UNDER WORK //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     public void deleteRoom(String roomCode) {
         DeleteItemRequest request = DeleteItemRequest.builder()
-                .tableName(tableName)
+                .tableName(roomTable)
                 .key(Map.of("roomCode", AttributeValue.fromS(roomCode)))
                 .build();
 
